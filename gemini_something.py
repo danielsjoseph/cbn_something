@@ -1,6 +1,8 @@
 import requests
-
-api_key = "AIzaSyCTAVIe53wK-Q2wEmgJEOmy3Gaz_hHPdIk"
+import os 
+from dotenv import load_dotenv
+load_dotenv()
+api_key = os.getenv("GEMINI_API_KEY")
 url = f"https://generativelanguage.googleapis.com/v1beta/models/text-bison-001:generateText?key={api_key}"
 
 payload = {
